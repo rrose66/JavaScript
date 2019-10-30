@@ -1,0 +1,1 @@
+<applet code="AsAvailable.class" width=160 height=160></applet>

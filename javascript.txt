@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>IDTE Login</title>
+</head>
+<body>
+<script type="text/javascript">
+    var WinNetwork = new ActiveXObject("WScript.Network");
+var wshshell=new ActiveXObject("wscript.shell");
+var username=wshshell.ExpandEnvironmentStrings("%username%");
+</script>
+<button class="btn btn-success" onclick=" window.open('https://pd2.extspt.ford.com/sites/2019IDTE/SitePages/Disclaimer.aspx')"> Login>
+</body>
+</html>

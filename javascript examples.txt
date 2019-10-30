@@ -1,0 +1,115 @@
+<button class="btn btn-success" onclick=" window.open('https://pd2.extspt.ford.com/sites/2019IDTE/SitePages/Disclaimer.aspx')"> Login>
+
+
+
+var context = new SP.ClientContext.get_current();
+var web = context.get_web();
+user = context.get_web().get_currentUser();
+window.alert(user);
+
+<script type="text/javascript">
+</script>
+
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="usrname">Email</label>
+    <input type="text" id="usrname" name="usrname" required>
+
+    <label for="psw">Password</label>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<div id="message">
+  <h3>Password must contain the following:</h3>
+  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+  <p id="number" class="invalid">A <b>number</b></p>
+  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+</div> 
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function () {
+    var siteURL = _spPageContextInfo.webAbsoluteUrl;
+    var listname = "Logins";
+    var currentUserId=_spPageContextInfo.userId
+    var url = siteURL + "/_api/web/lists/getbytitle('" + listname + "')/items?$filter=Author/Id eq "+currentUserId;
+    $.ajax({
+        url: url,
+        method: "GET",
+        headers: { "Accept": "application/json; odata=verbose" },
+        success: function (data) {       
+            var items = data.d.results;
+            $.each(items,function(index,item){
+                console.log("Title:"+item.Title);
+            });
+        },
+        error: function (error) {
+        console.log(JSON.stringify(error));
+        }
+    });
+});
+</script>
+
+
+
+<button class="btn btn-success" onclick=" window.open('https://pd2.extspt.ford.com/sites/2019IDTE/SitePages/Disclaimer.aspx')"> Login>
+
+
+<script src="/SiteAssets/jquery.SPServices-2013.02a.js" type="text/javascript"></script>
+<script src="/SiteAssets/jquery.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+  var userid= _spPageContextInfo.userId;
+  var requestUri = _spPageContextInfo.webAbsoluteUrl + "/_api/web/getuserbyid(" + userid + ")";
+  var requestHeaders = { "accept" : "application/json;odata=verbose" };
+  $.ajax({
+    url : requestUri,
+    contentType : "application/json;odata=verbose",
+    headers : requestHeaders,
+    success : onSuccess,
+    error : onError
+  });
+
+  function onSuccess(data, request){
+    var loginName = data.d.Title;
+    alert(loginName);
+  }
+
+  function onError(error) {
+    alert("error");
+  }
+</script>
+
+
+
+
+
+
+
+---------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>IDTE Login</title>
+</head>
+<body>
+<button class="btn btn-success" onclick=" window.open('https://pd2.extspt.ford.com/sites/2019IDTE/SitePages/Disclaimer.aspx')"> Login>
+</body>
+</html>
+
+
+
+<script type="text/javascript">    
+var userName = '@HttpContext.Current.User.Identity.Name';            
+window.alert(userName);
+<div id='listchecking' style='border: 3px solid red;'></div>
+src="https://it1.spt.ford.com/sites/DWSP2016/bin/jquery-3.3.1.min.js">
+src="https://it1.spt.ford.com/sites/DWSP2016/bin/list.js">
+
+</script>
+

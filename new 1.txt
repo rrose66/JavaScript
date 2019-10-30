@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+	<body>
+		<h1>JavaScript Development</h1>
+                     <script>
+'                          use strict';
+
+                           var clientContext = SP.ClientContext.get_current(); 
+                           var employeeList = clientContext.get_web().get_lists().getByTitle('Active_Citrix_Users'); 
+                           var completedItems; 
+                      </script> 
+	</body>
+</html>
