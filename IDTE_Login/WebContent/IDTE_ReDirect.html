@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+// document.write("Hello World");
+var WinNetwork = new ActiveXObject("WScript.Network");
+//alert(WinNetwork.UserName + " " + WinNetwork.UserDomain);
+// alert(WinNetwork.UserDomain);
+// alert(WinNetwork.UserDomain.indexOf("ORD"));
+//var strUserDomain;
+//strUserDomain= WinNetwork.UserDomain;
+//Alert(strUserDomain);
+var intFordFound;
+intFordFound = WinNetwork.UserDomain.indexOf("ORD");
+// alert(intFordFound);
+if (intFordFound > -1)
+{
+//	alert("Ford Supplier");
+//	window.location = "C:\\PROJECTS\\GitHub\\DAILY\\IDTE_Ford_Disclosure\\WebContent\\FordNonDisclosure.html";
+// 	window.location = "https://pd2.extspt.ford.com/sites/2019IDTE/SitePages/Ford%20Supplier%20Disclaimer.aspx";
+	window.location = "https://it1.spt.ford.com/sites/PDAM/IDTE/SitePages/IDTE_NoticeOfDisclosureForFordSuppliers.html";
+	}
+else
+	{
+	alert("Non Ford Supplier");
+	window.location = "C:\\PROJECTS\\GitHub\\DAILY\\IDTE_Ford_Disclosure\\WebContent\\IDTE_IdeasSubmissioinNonFord.html";
+	}
+</script>
+</body>
+</html>
