@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>ITIL Monitoring Checklist</title>
+</head>
+<body>
+<button>Start</button>
+<button onclick="OpenBMC()">BMC</button>
+<button onclick="OpenITconnect()">IT Connect</button>
+<button onclick="OpenRally()">Rally FEDEBOM</button>
+<br>
+<br>
+<button>Wizard Monitoring</button>
+<br>
+<button onclick="RunWizFB()">Run Wiz FB</button>
+<button onclick="RunITILresources()">Open ITIL Resources</button>
+<input type="button" value="Run Bat file" onclick="window.open('file:///c:/temp/rundir.bat')"/>
+<br>
+<br>
+<button>AVBOM2 Monitoring</button>
+<button onclick="OpenWebServiceMonitor()">Scan Web Services</button>
+<br>
+<br>
+<button onclick="OpenTimeTrackingSystems()">Time Tracking</button>
+<br>
+<br>
+<button>FEDE BOM Incident Tracking</button>
+<br>
+<button>Update data based on Tickets in Email</button>
+<button>Prepare for Incident Details Extraction</button>
+<button>Extract the Incident Details - Service Dashboard</button>
+<button>Process the Incident Changes</button>
+<br>
+<br>
+<button>Monitor Rally</button>
+<br>
+<button>Prepare to Export Rally Data</button>
+<button>Open Rally</button>
+<button>Extract Data</button>
+<button>Process Rally Data</button>
+<br>
+<br>
+<button>Monitor FEDE BOM Source</button>
+<br>
+<button onclick="OpenD4S2()">Open D4S2</button>
+<button onclick="OpenAccuRev()">Open AccuRev</button>
+<button onclick="PullAccuRevData()">Pull AccuRev Data</button>
+<button onclick="RecordSourceFileChangesFromAccuRevUpdate()">Record Changed Source Files From AccuRev Update</button>
+<script type="text/javascript">
+function OpenBMC()
+{
+// 	alert("Executing OpenBMC");
+	var wshShell = new ActiveXObject("WScript.Shell");
+	wshShell.Run("C:\\PROJECTS\\GitHub\\ITIL\\RunBMCjar.bat")
+}
+</script>
+<script type="text/javascript">
+function OpenITconnect()
+{
+	var wshShell = new ActiveXObject("WScript.Shell");
+	wshShell.Run("C:\\PROJECTS\\GitHub\\ITIL\\RunOpenITconnectJar.bat")
+}
+</script>
+<script type="text/javascript">
+function OpenRally()
+{
+	var wshShell = new ActiveXObject("WScript.Shell");
+	wshShell.Run("C:\\PROJECTS\\GitHub\\ITIL\\RunOpenRallyPortfolio.bat")
+}
+</script>
+<script type="text/javascript">
+function readTextFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file:///C:/PROJECTS/DATA/ITIL/Start.txt, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                alert(allText);
+            }
+        }
+    }
+    rawFile.send(null);
+}
+</script>
+<script type="text/javascript">
+function RunAccess()
+{
+	alert("Run Wiz FB");
+//	var cmd = cmd.exec(dir c:\temp\*.* > c:\temp\dir.txt)
+//	exec(cmd);
+}
+</script>
+<script type="text/javascript">
+function RunWizFB()
+{
+//	alert("Run Wiz FB");
+//	var cmd = cmd.exec(dir c:\temp\*.* > c:\temp\dir.txt)
+//	exec(cmd);
+	var wshShell = new ActiveXObject("WScript.Shell");
+	wshShell.Run("C:\\PROJECTS\\GitHub\\WIZ\\FB\\RunWizFB.bat")
+}
+</script>
+<script type="text/javascript">
+function RunITILresources()
+{
+	var wshShell = new ActiveXObject("WScript.Shell");
+	wshShell.Run("C:\\PROJECTS\\GitHub\\ITIL\\RunITILjar.bat")
+}
+</script>
+<script type="text/javascript">
+function OpenWebServiceMonitor()
+{
+	var wshShell = new ActiveXObject("WScript.Shell");
+	wshShell.Run("C:\\PROJECTS\\GitHub\\ITIL\\RunLiteProcessPortal.bat")
+}
+</script>
+<script type="text/javascript">
+function OpenTimeTrackingSystems()
+{
+	var wshShell = new ActiveXObject("WScript.Shell");
+	wshShell.Run("C:\\PROJECTS\\GitHub\\ITIL\\RunOpenTimeTrackingResourcesJar.bat")
+}
+</script>
+<script type="text/javascript">
+function OpenAccuRev()
+{
+	var wshShell = new ActiveXObject("WScript.Shell");
+	wshShell.Run("C:\\PROJECTS\\GitHub\\FEDEBOM\\RunAccuRev.bat")
+}
+</script>
+<script type="text/javascript">
+function PullAccuRevData()
+{
+	var wshShell = new ActiveXObject("WScript.Shell");
+	wshShell.Run("C:\\PROJECTS\\GitHub\\FEDEBOM\\PullAccuRevData.bat")
+}
+</script>
+<script type="text/javascript">
+function RecordSourceFileChangesFromAccuRevUpdate()
+{
+	var wshShell = new ActiveXObject("WScript.Shell");
+	wshShell.Run("C:\\PROJECTS\\GitHub\\ITIL\\RunRecordAccuRevFileChanged.bat")
+}
+</script>
+<script type="text/javascript">
+function OpenD4S2()
+{
+	var wshShell = new ActiveXObject("WScript.Shell");
+	wshShell.Run("C:\\PROJECTS\\EXECUTABLES\\D4_S2_FEDEBOM.exe")
+}
+</script>
+</body>
+</html>
